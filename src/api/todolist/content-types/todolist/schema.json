@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todolists",
+  "info": {
+    "singularName": "todolist",
+    "pluralName": "todolists",
+    "displayName": "todolists",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 128
+    },
+    "tasksList": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::task.task",
+      "mappedBy": "todolist"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "todolists"
+    }
+  }
+}

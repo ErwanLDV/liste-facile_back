@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "tasks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 128,
+      "minLength": 2
+    },
+    "isClose": {
+      "type": "boolean",
+      "default": false
+    },
+    "todolist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::todolist.todolist",
+      "inversedBy": "tasksList"
+    }
+  }
+}
