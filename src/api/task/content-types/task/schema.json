@@ -16,7 +16,7 @@
       "type": "string",
       "required": true,
       "maxLength": 128,
-      "minLength": 2
+      "minLength": 1
     },
     "isClose": {
       "type": "boolean",

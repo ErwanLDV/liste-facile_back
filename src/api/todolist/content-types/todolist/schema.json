@@ -15,7 +15,8 @@
     "title": {
       "type": "string",
       "required": true,
-      "maxLength": 128
+      "maxLength": 128,
+      "minLength": 1
     },
     "tasksList": {
       "type": "relation",
